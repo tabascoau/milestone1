@@ -1,0 +1,80 @@
+<!--create.ejs-->
+<!-- Need to modifiy this map to milestone Create Page-->
+
+<button type="button" class="btn btn-default">Home</button>
+<button type="button" class="btn btn-default">Search</button>
+<button type="button" class="btn btn-default">Create</button>
+<button type="button" class="btn btn-default">Admin</button>
+<div class="jumbotron text-left">
+    <h3>Event Management System</h3>
+    <p>HKBU Event Management System is a web-based system for department and student societies to broadcase events and activities
+        as well as registration</p>
+
+</div>
+
+<form action="/EventController/create" method="post">
+    <div class="container">
+        <div class="row">
+            <div class="row col-6">
+                <div class="col-12">
+                    <label>Event Name: </label>
+                    <input type="text" class="form-control" name="Event[name]" required>
+                </div>
+                <div class="col-12">
+                        <label>Short Description: </label>
+                        <textarea class="form-control" name="shortDescription" rows="3"></textarea>
+                    </div>
+                    <div class="col-12">
+                            <label>Short Description: </label>
+                            <textarea class="form-control" name="fullDescription" rows="10"></textarea>
+                        </div>
+                <div class="col-12">
+                    <label>image URL: </label>
+                    <input type="text" class="form-control" name="imageURL" required>
+                </div>
+                
+            </div>
+            <div class="row col-6">
+                <div class="col-12">
+                    <label>Organizer: </label>
+                    <select class="form-control" id="organizer">
+                        <option>HKBU</option>
+                        <option>CityU</option>
+                        <option>CUHK</option>
+                    </select>
+                </div>
+                
+                <div class="col-12">
+                    <label>Event Date: </label>
+                   <input class="datapicker" type="text" name="date">
+                    
+                </div>
+                <div class="col-12">
+                    <label>Time: </label>
+                    <input type="text" class="form-control" name="time" required>
+                </div>
+                <div class="col-12">
+                    <label>Venue: </label>
+                    <select class="form-control" id="venue">
+                        <option>FSC 801</option>
+                        <option>FSC 901C</option>
+                        <option>FSC 901D</option>
+                    </select>
+                    
+                </div>
+                
+                <div class="col-12">
+                    <label>Quota: </label>
+                    <input type="text" class="form-control" name="quota" required>
+                </div>
+                <div class="col-12">
+                    <input type="checkbox" name="highlight"> Highlighted Event</div>
+
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</form>
