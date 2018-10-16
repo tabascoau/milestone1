@@ -12,7 +12,7 @@
 
 </div>
 
-<form action="/EventController/create" method="POST">
+<form action="/Event/create" method="POST">
     <div class="container">
         <div class="row">
             <div class="row col-6">
@@ -47,7 +47,7 @@
                 <div class="col-12">
                     <label>Event Date: </label>
             
-                    <input type="text" id="datepicker" name="Event[date]">
+                    <input type="text" class="form-control" id="datepicker" name="Event[date]">
                     
                 </div>
                 <div class="col-12">
@@ -56,7 +56,7 @@
                 </div>
                 <div class="col-12">
                     <label>Venue: </label>
-                    <select class="form-control" id="Event[venue]">
+                    <select class="form-control" name="Event[venue]">
                         <option>FSC 801</option>
                         <option>FSC 901C</option>
                         <option>FSC 901D</option>
@@ -69,7 +69,7 @@
                     <input type="text" class="form-control" name="Event[quota]" required>
                 </div>
                 <div class="col-12">
-                    <input type="checkbox" name="Event[highlight]"> Highlighted Event</div>
+                    <input type="checkbox" name="Event[highlight]" value="true"> Highlighted Event</div>
 
                 <div class="col-12">
                     <button type="submit" class="btn btn-primary">Submit</button>

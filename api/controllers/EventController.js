@@ -6,6 +6,7 @@
  */
 
 module.exports = {
+    //create event function
     create: async function (req, res) {
         if (req.method == "GET")
             return res.view('event/create');
@@ -21,9 +22,11 @@ module.exports = {
 
     },
 
+    //mainpage function
     mainpage: async function (req, res) {
-        return res.view('event/mainpage');
-    }
+        var events=await Event.find();
+        return res.view('event/mainpage', {'events': events});
+    },
 
 };
 

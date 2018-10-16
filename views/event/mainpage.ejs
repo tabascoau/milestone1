@@ -6,17 +6,28 @@
 <button type="button" class="btn btn-default">Admin</button>
 <div class="jumbotron text-left">
     <h3>Event Management System</h3>
-    <p>HKBU Event Management System is a web-based system for department and student societies to broadcase events and activities as well as registration</p>
+    <p>HKBU Event Management System is a web-based system for department and student societies to broadcase events and activities
+        as well as registration</p>
 
 </div>
 
+
 <div class="container">
     <div class="row">
+            <% events.forEach( function(model) { %>
         <div class="col-sm-4">
-            <p>test</p>
+                
+            <div class="card">
+                <h4 class=card-title><%= model.name %></h4>
+                <p class=card-text><%= model.shortDes %></p>
+                <img class="card-img-top" src="https://www.sailmagazine.com/.image/t_share/MTUwODg4NDQ3ODY5OTg2NjQ5/01-opener-lagoon-42-n_1155_ncz8582-_a3.jpg">
+            </div>
+            
+                
+                    
+
+                        <% }); %>
         </div>
-        <div class="col-sm-4">
-            <p>test2</p>
-        </div>
+
     </div>
 </div>
