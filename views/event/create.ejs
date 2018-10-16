@@ -12,7 +12,7 @@
 
 </div>
 
-<form action="/EventController/create" method="post">
+<form action="/EventController/create" method="POST">
     <div class="container">
         <div class="row">
             <div class="row col-6">
@@ -22,22 +22,22 @@
                 </div>
                 <div class="col-12">
                         <label>Short Description: </label>
-                        <textarea class="form-control" name="shortDescription" rows="3"></textarea>
+                        <textarea class="form-control" name="Event[shortDes]" rows="3"></textarea>
                     </div>
                     <div class="col-12">
                             <label>Short Description: </label>
-                            <textarea class="form-control" name="fullDescription" rows="10"></textarea>
+                            <textarea class="form-control" name="Event[fullDes]" rows="10"></textarea>
                         </div>
                 <div class="col-12">
                     <label>image URL: </label>
-                    <input type="text" class="form-control" name="imageURL" required>
+                    <input type="text" class="form-control" name="Event[imageURL]" required>
                 </div>
                 
             </div>
             <div class="row col-6">
                 <div class="col-12">
                     <label>Organizer: </label>
-                    <select class="form-control" id="organizer">
+                    <select class="form-control" name="Event[organizer]">
                         <option>HKBU</option>
                         <option>CityU</option>
                         <option>CUHK</option>
@@ -46,16 +46,17 @@
                 
                 <div class="col-12">
                     <label>Event Date: </label>
-                    <input type="text" id="datepicker">
+            
+                    <input type="text" id="datepicker" name="Event[date]">
                     
                 </div>
                 <div class="col-12">
                     <label>Time: </label>
-                    <input type="text" class="form-control" name="time" required>
+                    <input type="text" class="form-control" name="Event[time]" required>
                 </div>
                 <div class="col-12">
                     <label>Venue: </label>
-                    <select class="form-control" id="venue">
+                    <select class="form-control" id="Event[venue]">
                         <option>FSC 801</option>
                         <option>FSC 901C</option>
                         <option>FSC 901D</option>
@@ -65,10 +66,10 @@
                 
                 <div class="col-12">
                     <label>Quota: </label>
-                    <input type="text" class="form-control" name="quota" required>
+                    <input type="text" class="form-control" name="Event[quota]" required>
                 </div>
                 <div class="col-12">
-                    <input type="checkbox" name="highlight"> Highlighted Event</div>
+                    <input type="checkbox" name="Event[highlight]"> Highlighted Event</div>
 
                 <div class="col-12">
                     <button type="submit" class="btn btn-primary">Submit</button>
